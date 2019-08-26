@@ -9,7 +9,6 @@
  before_script:
          - sudo apt update
          - sudo apt install doxygen
-         - sudo apt install libspdlog-dev -y
          - sudo apt install libboost-all-dev -y
  script:
          - cmake .
