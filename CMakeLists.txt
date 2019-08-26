@@ -13,12 +13,14 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 
 
-include_directories(".")
-#include_directories("observable")
-#include_directories("observer")
-#include_directories("processor")
+set(INC_DIRS  "." "radix/")
+set(SRC_LIST main.cpp  radix/strhelper.cpp radix/radixtree.cpp)
 
-add_executable(${PROJECT_NAME} main.cpp)
+
+include_directories(${INC_DIRS})
+
+
+add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
         CXX_STANDARD 14
