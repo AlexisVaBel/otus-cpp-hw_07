@@ -11,9 +11,9 @@
          - sudo cat /etc/apt/sources.list | grep -v "postgresql" 
 #           | sudo  tee /etc/apt/sources.list_new
 #         - sudo mv /etc/apt/sources.list_new /etc/apt/sources.list
-         - sudo add-apt-repository ppa:jonathonf/gcc-7.1
+         - sudo add-apt-repository ppa:jonathonf/gcc-7.1 -y
          - sudo apt-get update
-         - sudo apt-get install gcc-7 g++-7
+         - sudo apt-get install gcc-7 g++-7 
          - sudo apt-get install doxygen
          - sudo apt-get install libboost-all-dev -y
  script:
