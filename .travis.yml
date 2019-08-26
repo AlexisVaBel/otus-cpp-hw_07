@@ -9,7 +9,6 @@
  before_script:
          - sudo cat /etc/apt/sources.list | grep -v "postgresql" | sudo  tee /etc/apt/sources.list_new
          - sudo mv /etc/apt/sources.list_new /etc/apt/sources.list
-         - sudo rm /var/lib/apt/lists/* -vf
          - sudo apt-get update
          - sudo apt-get install doxygen
          - sudo apt-get install libboost-all-dev -y
