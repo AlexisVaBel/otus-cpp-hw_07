@@ -7,8 +7,8 @@
      - GH_REPO_REF: github.com/AlexisVaBel/otus-cpp-hw_07.git
 
  before_script:
-         - sudo apt-get clean
-
+         - sudo cat /etc/apt/sources.list | grep -v "postgresql" | tee /etc/apt/sources.list_new
+         - sudo mv /etc/apt/sources.list_new /etc/apt/sources.list
          - sudo rm /var/lib/apt/lists/* -vf
          - sudo apt-get update
          - sudo apt-get install doxygen
