@@ -28,7 +28,7 @@
          - provider: script
            skip_cleanup: true
            script:
-             - curl -T nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ualexisvabel:$BINTRAY_API_KEY "https://api.bintray.com/content/alexisvabel/otus-cpp/homework/$TRAVIS_BUILD_NUMBER/home/travis/build/AlexisVaBel/otus-cpp-hw_07/nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
+             - curl -T nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ualexisvabel:$BINTRAY_API_KEY "https://api.bintray.com/content/alexisvabel/otus-cpp/homework/$TRAVIS_BUILD_NUMBER/nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
 
 
 
