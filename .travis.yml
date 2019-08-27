@@ -1,4 +1,4 @@
- dist: trusty
+ dist: xenial
  language: cpp
  compiler: clang
  env:
@@ -7,13 +7,13 @@
      - GH_REPO_REF: github.com/AlexisVaBel/otus-cpp-hw_07.git
 
  before_script:
-         - sudo cat /etc/apt/sources.list 
-         - sudo cat /etc/apt/sources.list | grep -v "postgresql" 
+#         - sudo cat /etc/apt/sources.list 
+#         - sudo cat /etc/apt/sources.list | grep -v "postgresql" 
 #           | sudo  tee /etc/apt/sources.list_new
 #         - sudo mv /etc/apt/sources.list_new /etc/apt/sources.list
-         - sudo add-apt-repository ppa:jonathonf/gcc-7.1 -y
+#         - sudo add-apt-repository ppa:jonathonf/gcc-7.1 -y
          - sudo apt-get update
-         - sudo apt-get install gcc-7 g++-7 
+#         - sudo apt-get install gcc-7 g++-7 
          - sudo apt-get install doxygen
          - sudo apt-get install libboost-all-dev -y
  script:
@@ -33,7 +33,7 @@
          - provider: script
            skip_cleanup: true
            script:
-             - curl -T nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ualexisvabel:$BINTRAY_API_KEY "https://api.bintray.com/content/alexisvabel/otus-cpp/homework/$TRAVIS_BUILD_NUMBER/nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+             - curl -T nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ualexisvabel:$BINTRAY_API_KEY "https://api.bintray.com/content/alexisvabel/otus-cpp/homework/$TRAVIS_BUILD_NUMBER/nickname-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
 
 
 
