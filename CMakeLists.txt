@@ -14,7 +14,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 
 set(INC_DIRS  "." "radix/")
-set(SRC_LIST main.cpp  radix/strhelper.cpp radix/radixtree.cpp)
+set(SRC_LIST main.cpp  radix/strhelper.cpp radix/radixtree.cpp radix/radixtreeuniq.cpp)
 
 
 include_directories(${INC_DIRS})
