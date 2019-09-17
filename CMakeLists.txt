@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 set (CMAKE_CXX_STANDARD 14)
-
+#set(CMAKE_BUILD_TYPE Debug)
 project(nickname)
 
 if ($ENV{TRAVIS_BUILD_NUMBER})
@@ -14,7 +14,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 
 set(INC_DIRS  "." "radix/")
-set(SRC_LIST main.cpp  radix/strhelper.cpp radix/radixtree.cpp radix/radixtreeuniq.cpp)
+set(SRC_LIST main.cpp  radix/strhelper.cpp radix/radixtreeuniq.cpp)
 
 
 include_directories(${INC_DIRS})

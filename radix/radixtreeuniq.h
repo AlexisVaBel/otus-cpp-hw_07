@@ -23,7 +23,6 @@ private:
 
     void travers_by_name(RadixUnique *node, std::string accum);
 
-
     void push_to_node(RadixUnique *node, std::string str, int iend);
 };
 
