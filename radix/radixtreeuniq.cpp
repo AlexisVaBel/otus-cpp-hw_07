@@ -106,10 +106,11 @@ void RadixTreeUniq::travers_by_name(RadixUnique *node, std::string accum)
 
     if(node->is_end){        
         std::cout << accum << node->m_lbl;
-        if(!node->hasChildren())
-            std::cout<< " " << accum << get_head_str(node->m_lbl);
-        else
-            std::cout<< " " << accum << node->m_lbl;
+        std::cout<< " " << accum << get_head_str(node->m_lbl);
+//        if(!node->hasChildren())
+//            std::cout<< " " << accum << get_head_str(node->m_lbl);
+//        else
+//            std::cout<< " " << accum << node->m_lbl;
         std::cout << std::endl;
     }        
     for (size_t i = 0 ; i < MAX_CNT_CHILDS; ++i) {
