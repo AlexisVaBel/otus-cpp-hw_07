@@ -25,7 +25,7 @@ struct RadixUnique{
         m_lbl = "";
     }
 
-    void addChild(char chpos, std::string str, int iend ){
+    void addChild(unsigned char chpos, std::string str, int iend ){
         size_t ipos = chpos;
         if(chpos >= MAX_CNT_CHILDS) return;
         m_childs.at(ipos) =  std::unique_ptr<RadixUnique>(new RadixUnique());
@@ -34,7 +34,7 @@ struct RadixUnique{
 
     }
 
-    RadixUnique *getNode(char chpos){
+    RadixUnique *getNode(unsigned char chpos){
         size_t ipos = chpos;
         if(chpos >= MAX_CNT_CHILDS) return nullptr;
         return m_childs.at(ipos).get();
